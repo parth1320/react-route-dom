@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import ErrorPage from "./pages/Error";
 
+import ErrorPage from "./pages/Error";
 import Homepage from "./pages/Home";
 import ProductDetailsPage from "./pages/ProductDetails";
 import ProductsPage from "./pages/Products";

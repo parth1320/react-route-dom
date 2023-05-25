@@ -2,22 +2,27 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./pages/Error";
 
 import Homepage from "./pages/Home";
+import ProductDetailsPage from "./pages/ProductDetails";
 import ProductsPage from "./pages/Products";
 import RootLayout from "./pages/Root";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    errorElement: <ErrorPage />,
     element: <RootLayout />,
+    errorElement: <ErrorPage />,
     children: [
       {
-        path: "/",
+        index: true,
         element: <Homepage />,
       },
       {
-        path: "/products",
+        path: "products",
         element: <ProductsPage />,
+      },
+      {
+        path: "products/:pId",
+        element: <ProductDetailsPage />,
       },
     ],
   },
